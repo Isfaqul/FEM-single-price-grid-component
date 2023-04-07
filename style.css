@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --main-bg: hsl(204, 43%, 93%);
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-2: hsl(179, 47%, 52%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --white: white;
+
+  --f: "Karla", sans-serif;
+
+  --px32: 2rem;
+  --px24: 1.5rem;
+  --px20: 1.25rem;
+  --px18: 1.125rem;
+  --px16: 1rem;
+  --px15: 0.938rem;
+  --px14: 0.875rem;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 500ms ease-in-out;
+}
+
+html {
+  font-family: var(--f);
+}
+
+body {
+  min-height: 100vh;
+  padding: 0 2em;
+  display: grid;
+  place-content: center;
+  background-color: var(--main-bg);
+}
+
+main {
+  margin: 0 auto;
+  border-radius: 0.313em;
+  overflow: hidden;
+  width: min(100%, 31.25em);
+  box-shadow: 0px 17px 32px rgba(0, 0, 0, 0.12);
+}
+
+.ctnr {
+  padding: 1.5em;
+}
+
+.ctnr-1 {
+  background-color: var(--white);
+  padding: 2em 1.5em;
+}
+
+.hero-title {
+  color: var(--cyan);
+  font-size: var(--px20);
+  font-weight: 700;
+}
+
+.hero-txt-1 {
+  color: var(--bright-yellow);
+  font-size: var(--px16);
+  font-weight: 700;
+  margin: 1.5em auto 1.125em auto;
+}
+
+.hero-txt-2 {
+  color: var(--grayish-blue);
+  line-height: 185%;
+  font-size: var(--px14);
+}
+
+.ctnr-2 {
+  background-color: var(--cyan);
+  color: var(--white);
+}
+
+.title {
+  font-size: var(--px18);
+  margin-bottom: 1em;
+}
+
+.price {
+  font-size: var(--px32);
+  display: flex;
+  align-items: center;
+  gap: 0.344em;
+  margin-bottom: 0.219em;
+}
+
+.price span {
+  font-size: var(--px15);
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.btn {
+  background-color: var(--bright-yellow);
+  width: 100%;
+  color: var(--white);
+  border: none;
+  padding: 0.875em;
+  font-family: var(--f);
+  font-size: var(--px16);
+  margin-top: 1.813em;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0.156em;
+  transition: all 100ms ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  background-color: rgba(192, 223, 52, 0.9);
+}
+
+.btn:active {
+  background-color: rgba(173, 204, 34, 1);
+}
+
+.feature {
+  color: var(--white);
+  font-weight: 400;
+  font-size: var(--px16);
+  color: var(--main-bg);
+}
+
+.ctnr-3 {
+  background-color: var(--cyan-2);
+  color: var(--white);
+}
+
+.feature.small {
+  color: var(--white);
+  font-size: var(--px14);
+  line-height: 145%;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: min(100%, 39.688em);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "one one"
+      "two three";
+    border-radius: 0.625em;
+  }
+
+  .ctnr {
+    padding: 2.438em;
+  }
+
+  .ctnr-1 {
+    grid-area: one;
+  }
+
+  .hero-title {
+    font-size: var(--px24);
+  }
+
+  .hero-txt-1 {
+    font-size: var(--px18);
+    margin: 1.389em auto 0.556em auto;
+  }
+
+  .hero-txt-2 {
+    font-size: var(--px16);
+    line-height: 160%;
+  }
+
+  .ctnr-2 {
+    grid-area: two;
+  }
+
+  .btn {
+    padding: 0.938em;
+  }
+
+  .ctnr-3 {
+    grid-area: three;
+  }
+
+  .feature.small {
+    color: var(--white);
+    font-size: var(--px14);
+    line-height: 140%;
+  }
+}
